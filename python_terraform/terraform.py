@@ -152,7 +152,6 @@ class Terraform:
         :return: ret_code, stdout, stderr
         """
         default = kwargs.copy()
-        default["force"] = force
         options = self._generate_default_options(default)
         args = self._generate_default_args(dir_or_plan)
         return self.cmd("destroy", *args, **options)
